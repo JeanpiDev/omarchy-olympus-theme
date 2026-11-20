@@ -1,0 +1,32 @@
+mode = "dark"
+
+# Olympus — mitología griega
+accent = "#d0703f"        # terracota de ánfora
+selection = "#2f3747"
+muted = "#59607a"
+
+background = "#161a22"    # mar color de vino (noche egea)
+dark_background = "#11141b"
+darker_background = "#0b0d12"
+lighter_background = "#222834"
+
+foreground = "#e4ddcf"    # mármol pentélico
+dark_foreground = "#858a99"
+light_foreground = "#cfc8ba"
+bright_foreground = "#f3eee4"
+
+red = "#d65d52"           # sangre de Ares
+yellow = "#d9b45a"        # vellocino de oro
+orange = "#e08a4c"        # fuego de Prometeo
+green = "#9aa35a"         # olivo de Atenea
+cyan = "#6fb3b8"          # espuma de Afrodita
+blue = "#5b93c7"          # Egeo / Poseidón
+magenta = "#b8709f"       # púrpura de Tiro
+brown = "#8c5a3c"
+
+bright_red = "#dd6f66"
+bright_yellow = "#e8c878"
+bright_green = "#b1ba72"
+bright_cyan = "#8bc8cc"
+bright_blue = "#78aad8"
+bright_magenta = "#c886b3"
