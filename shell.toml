@@ -1,0 +1,142 @@
+# Olympus — shell surfaces.
+# Black-glaze surfaces like red-figure pottery, terracotta-to-gold borders,
+# gold for whatever is selected.
+
+[bar]
+background       = "#0b0d12"
+background-alpha = 0.94
+text             = "#e4ddcf"
+active           = "#d65d52"
+scale-with-font  = true
+size-horizontal  = 26
+size-vertical    = 28
+
+[hyprland]
+# Terracotta into gold, the way the clay warms toward the light.
+active-border            = "rgba(d0703fff) rgba(d9b45aff) 45deg"
+active-border-foreground = "rgba(d9b45acc)"
+soft-border              = "rgba(d0703f80) rgba(d9b45a80) 45deg"
+
+[controls]
+normal-color        = "#e4ddcf"
+normal-fill-alpha   = 0.04
+normal-border       = "#e4ddcf"
+normal-border-width = 1
+normal-border-alpha = 0.3
+
+hover-cursor-color        = "#d9b45a"
+hover-cursor-fill-alpha   = 0.08
+hover-cursor-border       = "#d9b45a"
+hover-cursor-border-width = 1
+hover-cursor-border-alpha = 0.35
+
+focus-color        = "#d9b45a"
+focus-fill-alpha   = 0.08
+focus-border       = "#d9b45a"
+focus-border-width = 1
+focus-border-alpha = 0.35
+
+selected-color        = "#d9b45a"
+selected-fill-alpha   = 0.16
+selected-border       = "#d0703f"
+selected-border-width = 0
+selected-border-alpha = 1.0
+
+pressed-fill-alpha   = 0.22
+selection-fill-alpha = 0.35
+
+[spacing]
+scale = 1.0
+scale-with-font = true
+
+[font]
+base-size = 12
+
+[popups]
+border-width     = 1
+background       = "#11141b"
+background-alpha = 0.96
+text             = "#e4ddcf"
+border           = "hyprland.active-border"
+border-alpha     = 1.0
+
+[tooltip]
+border-width     = 1
+background       = "#0b0d12"
+background-alpha = 0.97
+text             = "#e4ddcf"
+border           = "hyprland.active-border-foreground"
+border-alpha     = 1.0
+
+[notifications]
+border-width     = 1
+background       = "#11141b"
+background-alpha = 0.94
+text             = "#e4ddcf"
+border           = "hyprland.soft-border"
+border-alpha     = 1.0
+countdown        = "#d9b45a"
+
+[launcher]
+border-width              = 1
+background                = "#11141b"
+background-alpha          = 0.95
+text                      = "#e4ddcf"
+border                    = "hyprland.active-border"
+border-alpha              = 1.0
+scrim                     = "#0b0d12"
+scrim-alpha               = 0.55
+selected-background       = "#d0703f"
+selected-background-alpha = 0.14
+selected-text             = "#d9b45a"
+selected-border           = "hyprland.active-border-foreground"
+selected-border-alpha     = 0.35
+
+[menu]
+border-width              = 1
+background                = "#11141b"
+background-alpha          = 0.97
+text                      = "#e4ddcf"
+border                    = "hyprland.active-border"
+border-alpha              = 1.0
+scrim                     = "#0b0d12"
+scrim-alpha               = 0.5
+selected-background       = "#d0703f"
+selected-background-alpha = 0.14
+selected-text             = "#d9b45a"
+selected-border           = "hyprland.active-border-foreground"
+selected-border-alpha     = 0.35
+
+[polkit]
+border-width     = 1
+background       = "#11141b"
+background-alpha = 1.0
+text             = "#e4ddcf"
+text-error       = "#d65d52"
+border           = "hyprland.active-border"
+border-error     = "#d65d52"
+border-alpha     = 1.0
+scrim            = "#0b0d12"
+scrim-alpha      = 0.6
+accent           = "#d9b45a"
+
+[lock]
+border-width     = 1
+background       = "#0b0d12"
+background-alpha = 0.85
+text             = "#e4ddcf"
+placeholder      = "#9e9b94"
+text-error       = "#d65d52"
+border           = "hyprland.soft-border"
+border-active    = "hyprland.active-border"
+border-error     = "#d65d52"
+border-alpha     = 1.0
+selection        = "#d0703f"
+selection-alpha  = 0.45
+
+[image-picker]
+text                    = "#e4ddcf"
+selected-border         = "#d9b45a"
+selected-border-alpha   = 1.0
+unselected-border       = "#e4ddcf"
+unselected-border-alpha = 0.25
