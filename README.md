@@ -10,6 +10,29 @@ A dark [Omarchy](https://omarchy.org) theme inspired by Greek mythology: a wine-
 omarchy theme install https://github.com/JeanpiDev/omarchy-olympus-theme
 ```
 
+## More than colors
+
+Olympus ships its own identity, not just a palette and wallpapers:
+
+| Piece | What it does | How it applies |
+|---|---|---|
+| `unlock.png` | Temple + **OLYMPUS** logo for the boot (Plymouth) and login screens | Automatic in *Appearance › Unlock*, or `omarchy plymouth set-by-theme olympus` |
+| `extras/about.txt` | The Omarchy logo in *About* (fastfetch) becomes a Greek temple | Opt-in hook (below) |
+| `extras/screensaver.txt` | The screensaver animates the temple and **OLYMPUS** | Opt-in hook (below) |
+
+![Lock screen preview](preview-unlock.png)
+
+### Opt-in extras
+
+The About and screensaver art are global in Omarchy, and installing a theme never runs code, so they come as a small `theme-set` hook you install yourself. It swaps the art in while Olympus is active and puts your previous art back when you switch to any other theme (it leaves alone anything you edited meanwhile).
+
+```bash
+bash ~/.config/omarchy/themes/olympus/extras/install.sh     # enable
+bash ~/.config/omarchy/themes/olympus/extras/uninstall.sh   # remove and restore
+```
+
+The temple is drawn in `extras/src/temple.svg` and converted with `omarchy transcode ascii`.
+
 ## Palette
 
 | Role | Color | |
