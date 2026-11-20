@@ -2,7 +2,7 @@
 
 A dark [Omarchy](https://omarchy.org) theme inspired by Greek mythology: a wine-dark Aegean night, marble text and amphora terracotta, with ten public-domain masterpieces as backgrounds — two per art movement.
 
-![Olympus preview](preview.png)
+![Olympus preview](preview.webp)
 
 ## Install
 
@@ -16,11 +16,14 @@ Olympus ships its own identity, not just a palette and wallpapers:
 
 | Piece | What it does | How it applies |
 |---|---|---|
+| `shell.toml` | Black-glaze bar and panels with terracotta-to-gold borders; gold for whatever is selected (menus, launcher, notifications, lock, polkit) | Automatic |
 | `unlock.png` | Temple + **OLYMPUS** logo for the boot (Plymouth) and login screens | Automatic in *Appearance › Unlock*, or `omarchy plymouth set-by-theme olympus` |
 | `extras/about.txt` | The Omarchy logo in *About* (fastfetch) becomes a Greek temple | Opt-in hook (below) |
 | `extras/screensaver.txt` | The screensaver animates the temple and **OLYMPUS** | Opt-in hook (below) |
 
-![Lock screen preview](preview-unlock.png)
+![Lock screen preview](preview-unlock.webp)
+
+![Screensaver](extras/screensaver.webp)
 
 ### Opt-in extras
 
@@ -50,20 +53,17 @@ The temple is drawn in `extras/src/temple.svg` and converted with `omarchy trans
 
 All accent colors meet WCAG AA (≥ 4.5:1) against the background.
 
-## Backgrounds
+## Wallpapers
 
-| # | Movement | Work |
-|---|---|---|
-| 01 | Romanticism | J. M. W. Turner — *Ulysses Deriding Polyphemus* (1829) |
-| 02 | Romanticism | J. M. W. Turner — *The Bay of Baiae, with Apollo and the Sibyl* (1823) |
-| 03 | Pre-Raphaelite | J. W. Waterhouse — *Ulysses and the Sirens* (1891) |
-| 04 | Pre-Raphaelite | J. W. Waterhouse — *Echo and Narcissus* (1903) |
-| 05 | Renaissance | Sandro Botticelli — *The Birth of Venus* (c. 1485) |
-| 06 | Renaissance | Sandro Botticelli — *Primavera* (c. 1480) |
-| 07 | Baroque | Peter Paul Rubens — *The Fall of Phaeton* (c. 1605) |
-| 08 | Baroque | Annibale Carracci — *The Triumph of Bacchus and Ariadne* (1597) |
-| 09 | Symbolism | Arnold Böcklin — *Im Spiel der Wellen* (1883) |
-| 10 | Symbolism | Arnold Böcklin — *Die Nereide* |
+Ten public-domain paintings, two per art movement. Click any one for the full 2560×1440 wallpaper.
+
+<table>
+<tr><td width="50%" align="center"><a href="backgrounds/01-turner-polyphemus.webp"><img src="thumbnails/01-turner-polyphemus.webp" alt="Ulysses Deriding Polyphemus by J. M. W. Turner"></a><br><strong>Ulysses Deriding Polyphemus</strong><br><sub>J. M. W. Turner · 1829 · Romanticism</sub></td><td width="50%" align="center"><a href="backgrounds/02-turner-baiae.webp"><img src="thumbnails/02-turner-baiae.webp" alt="The Bay of Baiae, with Apollo and the Sibyl by J. M. W. Turner"></a><br><strong>The Bay of Baiae, with Apollo and the Sibyl</strong><br><sub>J. M. W. Turner · 1823 · Romanticism</sub></td></tr>
+<tr><td width="50%" align="center"><a href="backgrounds/03-waterhouse-sirens.webp"><img src="thumbnails/03-waterhouse-sirens.webp" alt="Ulysses and the Sirens by J. W. Waterhouse"></a><br><strong>Ulysses and the Sirens</strong><br><sub>J. W. Waterhouse · 1891 · Pre-Raphaelite</sub></td><td width="50%" align="center"><a href="backgrounds/04-waterhouse-narcissus.webp"><img src="thumbnails/04-waterhouse-narcissus.webp" alt="Echo and Narcissus by J. W. Waterhouse"></a><br><strong>Echo and Narcissus</strong><br><sub>J. W. Waterhouse · 1903 · Pre-Raphaelite</sub></td></tr>
+<tr><td width="50%" align="center"><a href="backgrounds/05-botticelli-venus.webp"><img src="thumbnails/05-botticelli-venus.webp" alt="The Birth of Venus by Sandro Botticelli"></a><br><strong>The Birth of Venus</strong><br><sub>Sandro Botticelli · c. 1485 · Renaissance</sub></td><td width="50%" align="center"><a href="backgrounds/06-botticelli-primavera.webp"><img src="thumbnails/06-botticelli-primavera.webp" alt="Primavera by Sandro Botticelli"></a><br><strong>Primavera</strong><br><sub>Sandro Botticelli · c. 1480 · Renaissance</sub></td></tr>
+<tr><td width="50%" align="center"><a href="backgrounds/07-rubens-phaeton.webp"><img src="thumbnails/07-rubens-phaeton.webp" alt="The Fall of Phaeton by Peter Paul Rubens"></a><br><strong>The Fall of Phaeton</strong><br><sub>Peter Paul Rubens · c. 1605 · Baroque</sub></td><td width="50%" align="center"><a href="backgrounds/08-carracci-bacchus.webp"><img src="thumbnails/08-carracci-bacchus.webp" alt="The Triumph of Bacchus and Ariadne by Annibale Carracci"></a><br><strong>The Triumph of Bacchus and Ariadne</strong><br><sub>Annibale Carracci · 1597 · Baroque</sub></td></tr>
+<tr><td width="50%" align="center"><a href="backgrounds/09-bocklin-wellen.webp"><img src="thumbnails/09-bocklin-wellen.webp" alt="Im Spiel der Wellen by Arnold Böcklin"></a><br><strong>Im Spiel der Wellen</strong><br><sub>Arnold Böcklin · 1883 · Symbolism</sub></td><td width="50%" align="center"><a href="backgrounds/10-bocklin-nereide.webp"><img src="thumbnails/10-bocklin-nereide.webp" alt="Die Nereide by Arnold Böcklin"></a><br><strong>Die Nereide</strong><br><sub>Arnold Böcklin · Symbolism</sub></td></tr>
+</table>
 
 Images come from Wikimedia Commons; the artworks are in the public domain. They were cropped to 16:9 (2560×1440) and lightly adjusted in brightness. Note that several classical paintings include nudity.
 
