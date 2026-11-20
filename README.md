@@ -25,6 +25,10 @@ Olympus ships its own identity, not just a palette and wallpapers:
 
 ![Screensaver](extras/screensaver.webp)
 
+### Recommended bar
+
+Olympus pairs well with [Shibumi Shell](https://github.com/HANCORE-linux/Shibumi-Shell), a native bar and plugin suite for Omarchy that picks up the active theme's colors on its own. Install it from its release tag following its README, then switch between its V1 and V2 bars from its Control Center (*Quick*). `shibumi-shell uninstall --yes` (or `./scripts/shibumi-suite uninstall --yes` from a source checkout) restores the stock bar.
+
 ### Opt-in extras
 
 The About and screensaver art are global in Omarchy, and installing a theme never runs code, so they come as a small `theme-set` hook you install yourself. It swaps the art in while Olympus is active and puts your previous art back when you switch to any other theme (it leaves alone anything you edited meanwhile).
