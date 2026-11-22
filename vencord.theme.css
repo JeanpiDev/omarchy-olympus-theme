@@ -1,0 +1,203 @@
+/**
+ * @name Olympus
+ * @author JeanpiDev
+ * @version 1.1.0
+ * @description Olympus for Discord: wine-dark Aegean surfaces, marble text, terracotta and gold.
+ * @source https://github.com/JeanpiDev/omarchy-olympus-theme
+ */
+
+/* Palette (colors.toml) */
+:root {
+  --olympus-bg: #161a22;
+  --olympus-bg-dark: #11141b;
+  --olympus-bg-darker: #0b0d12;
+  --olympus-bg-light: #222834;
+  --olympus-bg-lighter: #2a3140;
+  --olympus-selection: #2f3747;
+  --olympus-muted: #59607a;
+  --olympus-fg: #e4ddcf;
+  --olympus-fg-dim: #9e9b94;
+  --olympus-fg-light: #cfc8ba;
+  --olympus-accent: #d0703f;
+  --olympus-accent-hover: #dd8152;
+  --olympus-gold: #d9b45a;
+  --olympus-red: #d65d52;
+  --olympus-green: #9aa35a;
+  --olympus-blue: #5b93c7;
+}
+
+/* Discord tokens, old and visual-refresh names, forced over the built-in theme */
+:root,
+.theme-dark,
+.theme-darker,
+.theme-midnight,
+.visual-refresh,
+.visual-refresh.theme-dark,
+.visual-refresh .theme-dark {
+  /* Surfaces */
+  --background-base-lowest: var(--olympus-bg-darker) !important;
+  --background-base-lower: var(--olympus-bg-dark) !important;
+  --background-base-low: var(--olympus-bg) !important;
+  --background-base-high: var(--olympus-bg-light) !important;
+  --background-base-higher: var(--olympus-bg-light) !important;
+  --background-base-highest: var(--olympus-bg-lighter) !important;
+  --background-surface-high: var(--olympus-bg-light) !important;
+  --background-surface-higher: var(--olympus-bg-light) !important;
+  --background-surface-highest: var(--olympus-bg-lighter) !important;
+  --background-primary: var(--olympus-bg) !important;
+  --background-secondary: var(--olympus-bg-dark) !important;
+  --background-secondary-alt: var(--olympus-bg-dark) !important;
+  --background-tertiary: var(--olympus-bg-darker) !important;
+  --background-accent: var(--olympus-selection) !important;
+  --background-floating: var(--olympus-bg-dark) !important;
+  --background-nested-floating: var(--olympus-bg-light) !important;
+  --bg-base-primary: var(--olympus-bg) !important;
+  --bg-base-secondary: var(--olympus-bg-dark) !important;
+  --bg-base-tertiary: var(--olympus-bg-darker) !important;
+  --bg-surface-raised: var(--olympus-bg-light) !important;
+  --bg-surface-overlay: var(--olympus-bg-dark) !important;
+  --bg-overlay-2: var(--olympus-bg-dark) !important;
+  --bg-overlay-3: var(--olympus-bg-light) !important;
+  --home-background: var(--olympus-bg) !important;
+  --chat-background-default: var(--olympus-bg) !important;
+  --channeltextarea-background: var(--olympus-bg-light) !important;
+  --input-background: var(--olympus-bg-darker) !important;
+  --modal-background: var(--olympus-bg) !important;
+  --modal-footer-background: var(--olympus-bg-dark) !important;
+
+  /* Hover and selection */
+  --background-modifier-hover: rgba(228, 221, 207, 0.05) !important;
+  --background-modifier-active: rgba(228, 221, 207, 0.08) !important;
+  --background-modifier-selected: rgba(208, 112, 63, 0.18) !important;
+  --background-modifier-accent: rgba(228, 221, 207, 0.08) !important;
+  --background-mentioned: rgba(217, 180, 90, 0.10) !important;
+  --background-mentioned-hover: rgba(217, 180, 90, 0.15) !important;
+  --background-message-hover: rgba(228, 221, 207, 0.03) !important;
+  --background-message-highlight: rgba(217, 180, 90, 0.10) !important;
+
+  /* Text */
+  --text-default: var(--olympus-fg) !important;
+  --text-normal: var(--olympus-fg) !important;
+  --text-strong: var(--olympus-fg) !important;
+  --text-muted: var(--olympus-fg-dim) !important;
+  --text-subtle: var(--olympus-fg-dim) !important;
+  --text-link: var(--olympus-gold) !important;
+  --text-positive: var(--olympus-green) !important;
+  --text-warning: var(--olympus-gold) !important;
+  --text-danger: var(--olympus-red) !important;
+  --text-brand: var(--olympus-accent) !important;
+  --header-primary: var(--olympus-fg) !important;
+  --header-secondary: var(--olympus-fg-light) !important;
+  --channels-default: var(--olympus-fg-dim) !important;
+  --channels-default-muted: var(--olympus-muted) !important;
+  --channels-default-unread: var(--olympus-fg) !important;
+  --channel-icon: var(--olympus-fg-dim) !important;
+  --info-danger-foreground: var(--olympus-red) !important;
+  --info-warning-foreground: var(--olympus-gold) !important;
+  --info-positive-text: var(--olympus-green) !important;
+
+  /* Interactive */
+  --interactive-normal: var(--olympus-fg-light) !important;
+  --interactive-hover: var(--olympus-fg) !important;
+  --interactive-active: var(--olympus-gold) !important;
+  --interactive-muted: var(--olympus-muted) !important;
+  --icon-default: var(--olympus-fg-light) !important;
+  --icon-muted: var(--olympus-fg-dim) !important;
+  --icon-strong: var(--olympus-fg) !important;
+  --focus-primary: var(--olympus-gold) !important;
+  --input-border-focus: var(--olympus-gold) !important;
+
+  /* Brand and buttons */
+  --brand-360: var(--olympus-accent-hover) !important;
+  --brand-500: var(--olympus-accent) !important;
+  --brand-560: #b9612f !important;
+  --brand-600: #a45528 !important;
+  --brand-experiment: var(--olympus-accent) !important;
+  --bg-brand: var(--olympus-accent) !important;
+  --control-brand-foreground: var(--olympus-accent) !important;
+  --control-brand-foreground-new: var(--olympus-accent) !important;
+  --button-filled-brand-background: var(--olympus-accent) !important;
+  --button-filled-brand-background-hover: var(--olympus-accent-hover) !important;
+  --button-filled-brand-text: var(--olympus-bg-darker) !important;
+  --button-secondary-background: var(--olympus-bg-light) !important;
+  --button-secondary-background-hover: var(--olympus-selection) !important;
+  --button-secondary-text: var(--olympus-fg) !important;
+  --button-positive-background: var(--olympus-green) !important;
+  --button-positive-background-hover: #aab46a !important;
+  --button-positive-text: var(--olympus-bg-darker) !important;
+  --button-danger-background: var(--olympus-red) !important;
+  --button-danger-background-hover: #dd6f66 !important;
+  --button-danger-text: var(--olympus-bg-darker) !important;
+  --mention-foreground: var(--olympus-gold) !important;
+  --mention-background: rgba(217, 180, 90, 0.18) !important;
+  --status-positive: var(--olympus-green) !important;
+  --status-warning: var(--olympus-gold) !important;
+  --status-danger: var(--olympus-red) !important;
+
+  /* Lines and scrollbars */
+  --border-subtle: rgba(228, 221, 207, 0.06) !important;
+  --border-normal: rgba(228, 221, 207, 0.10) !important;
+  --border-strong: rgba(208, 112, 63, 0.35) !important;
+  --border-faint: rgba(228, 221, 207, 0.04) !important;
+  --scrollbar-auto-thumb: var(--olympus-selection) !important;
+  --scrollbar-auto-track: transparent !important;
+  --scrollbar-thin-thumb: var(--olympus-selection) !important;
+  --scrollbar-thin-track: transparent !important;
+}
+
+/* Main regions, painted directly so the palette shows even where Discord
+   hard-codes a surface. */
+body,
+[class*="bg_"],
+[class*="app_"] {
+  background-color: var(--olympus-bg-darker) !important;
+}
+
+[class*="guilds_"] {
+  background-color: var(--olympus-bg-darker) !important;
+}
+
+[class*="sidebar_"],
+[class*="sidebarList_"],
+[class*="privateChannels_"] {
+  background-color: var(--olympus-bg-dark) !important;
+}
+
+[class*="chat_"],
+[class*="chatContent_"],
+[class*="contentRegion_"],
+[class*="container_"][class*="themedBackground_"] {
+  background-color: var(--olympus-bg) !important;
+}
+
+[class*="membersWrap_"],
+[class*="members_"] {
+  background-color: var(--olympus-bg-dark) !important;
+}
+
+[class*="panels_"] {
+  background-color: var(--olympus-bg-darker) !important;
+  border-top: 1px solid rgba(208, 112, 63, 0.35) !important;
+}
+
+/* Message box with a thin terracotta edge */
+[class*="channelTextArea_"] [class*="scrollableContainer_"] {
+  background-color: var(--olympus-bg-light) !important;
+  border: 1px solid rgba(208, 112, 63, 0.25) !important;
+}
+
+/* Gold marks the selected channel and DM */
+[class*="modeSelected"] [class*="name"],
+[class*="modeSelected"] [class*="icon"],
+[class*="selected_"] [class*="name_"] {
+  color: var(--olympus-gold) !important;
+}
+
+/* Server pill in terracotta */
+[class*="guilds_"] [class*="item_"] {
+  background-color: var(--olympus-accent) !important;
+}
+
+::selection {
+  background: rgba(208, 112, 63, 0.45);
+}

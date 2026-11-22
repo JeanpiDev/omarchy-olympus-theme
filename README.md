@@ -17,6 +17,7 @@ Olympus ships its own identity, not just a palette and wallpapers:
 | Piece | What it does | How it applies |
 |---|---|---|
 | `shell.toml` | Black-glaze bar and panels with terracotta-to-gold borders; gold for whatever is selected (menus, launcher, notifications, lock, polkit) | Automatic |
+| `vencord.theme.css` | Discord in the Olympus palette: wine-dark surfaces, marble text, terracotta and gold | Copy it to `~/.config/Vencord/themes/` and enable it in *Settings › Themes* |
 | `unlock.png` | Temple + **OLYMPUS** logo for the boot (Plymouth) and login screens | Automatic in *Appearance › Unlock*, or `omarchy plymouth set-by-theme olympus` |
 | `extras/about.txt` | The Omarchy logo in *About* (fastfetch) becomes a Greek temple | Opt-in hook (below) |
 | `extras/screensaver.txt` | The screensaver animates the temple and **OLYMPUS** | Opt-in hook (below) |
