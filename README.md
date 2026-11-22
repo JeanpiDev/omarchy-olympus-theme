@@ -17,6 +17,7 @@ Olympus ships its own identity, not just a palette and wallpapers:
 | Piece | What it does | How it applies |
 |---|---|---|
 | `shell.toml` | Black-glaze bar and panels with terracotta-to-gold borders; gold for whatever is selected (menus, launcher, notifications, lock, polkit) | Automatic |
+| `vencord.theme.css` | Discord in the Olympus palette: wine-dark surfaces, marble text, terracotta and gold | Copy it to `~/.config/Vencord/themes/` and enable it in *Settings › Themes* |
 | `unlock.png` | Temple + **OLYMPUS** logo for the boot (Plymouth) and login screens | Automatic in *Appearance › Unlock*, or `omarchy plymouth set-by-theme olympus` |
 | `extras/about.txt` | The Omarchy logo in *About* (fastfetch) becomes a Greek temple | Opt-in hook (below) |
 | `extras/screensaver.txt` | The screensaver animates the temple and **OLYMPUS** | Opt-in hook (below) |
@@ -27,15 +28,29 @@ Olympus ships its own identity, not just a palette and wallpapers:
 
 ### Recommended bar
 
-Olympus pairs well with [Shibumi Shell](https://github.com/HANCORE-linux/Shibumi-Shell), a native bar and plugin suite for Omarchy that picks up the active theme's colors on its own. Install it from its release tag following its README, then switch between its V1 and V2 bars from its Control Center (*Quick*). `shibumi-shell uninstall --yes` (or `./scripts/shibumi-suite uninstall --yes` from a source checkout) restores the stock bar.
+Olympus pairs well with [Shibumi Shell](https://github.com/HANCORE-linux/Shibumi-Shell), a native bar and plugin suite for Omarchy that picks up the active theme's colors on its own. Install it from its release tag following its README. `shibumi-shell uninstall --yes` (or `./scripts/shibumi-suite uninstall --yes` from a source checkout) restores the stock bar.
+
+The preview uses this setup, all from Shibumi's Control Center:
+
+- **Quick:** the V2 bar with the **Notch** style — a centered island under the top edge.
+- **Configure › Logo:** the `omarchy` wordmark.
+- **Bars:** five workspaces with the *Magic* style; the thermals and root-filesystem groups turned off.
+- The music widget draws its spectrum with [`cava`](https://archlinux.org/packages/extra/x86_64/cava/) (`sudo pacman -S cava`); without it the bars stay still.
+
+With the island bar, a smaller top gap keeps windows close to it. In `~/.config/hypr/looknfeel.lua`:
+
+```lua
+hl.config({ general = { gaps_out = { top = 2, right = 10, bottom = 10, left = 10 } } })
+```
 
 ### Opt-in extras
 
-The About and screensaver art are global in Omarchy, and installing a theme never runs code, so they come as a small `theme-set` hook you install yourself. It swaps the art in while Olympus is active and puts your previous art back when you switch to any other theme (it leaves alone anything you edited meanwhile).
+The About and screensaver art are global in Omarchy, and installing a theme never runs code, so the art ships here and the `theme-set` hook that applies it lives in its own repository, [Olympus extras](https://github.com/JeanpiDev/omarchy-olympus-extras). It swaps the art in while Olympus is active and puts your previous art back when you switch to any other theme (it leaves alone anything you edited meanwhile).
 
 ```bash
-bash ~/.config/omarchy/themes/olympus/extras/install.sh     # enable
-bash ~/.config/omarchy/themes/olympus/extras/uninstall.sh   # remove and restore
+git clone https://github.com/JeanpiDev/omarchy-olympus-extras ~/.local/src/omarchy-olympus-extras
+bash ~/.local/src/omarchy-olympus-extras/install.sh     # enable
+bash ~/.local/src/omarchy-olympus-extras/uninstall.sh   # remove and restore
 ```
 
 The temple is drawn in `extras/src/temple.svg` and converted with `omarchy transcode ascii`.
