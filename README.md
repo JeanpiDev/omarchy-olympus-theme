@@ -44,12 +44,14 @@ hl.config({ general = { gaps_out = { top = 2, right = 10, bottom = 10, left = 10
 
 ### Opt-in extras
 
-The About and screensaver art are global in Omarchy, and installing a theme never runs code, so they come as a small `theme-set` hook you install yourself. It swaps the art in while Olympus is active and puts your previous art back when you switch to any other theme (it leaves alone anything you edited meanwhile).
+The About and screensaver art are global in Omarchy, and installing a theme never runs code, so the art ships here and the `theme-set` hook that applies it lives in its own repository, [Olympus extras](https://github.com/JeanpiDev/omarchy-olympus-extras). It swaps the art in while Olympus is active and puts your previous art back when you switch to any other theme (it leaves alone anything you edited meanwhile).
 
 ```bash
-bash ~/.config/omarchy/themes/olympus/extras/install.sh     # enable
-bash ~/.config/omarchy/themes/olympus/extras/uninstall.sh   # remove and restore
+git clone https://github.com/JeanpiDev/omarchy-olympus-extras ~/.local/src/omarchy-olympus-extras
+bash ~/.local/src/omarchy-olympus-extras/install.sh     # enable
+bash ~/.local/src/omarchy-olympus-extras/uninstall.sh   # remove and restore
 ```
+
 The temple is drawn in `extras/src/temple.svg` and converted with `omarchy transcode ascii`.
 
 ## Palette
