@@ -7,7 +7,7 @@ A dark [Omarchy](https://omarchy.org) theme inspired by Greek mythology: a wine-
 ## Install
 
 ```bash
-omarchy theme install https://github.com/JeanpiDev/omarchy-olympus-theme
+omarchy theme install https://github.com/Jxanpi/omarchy-olympus-theme
 ```
 
 ## More than colors
@@ -45,10 +45,10 @@ hl.config({ general = { gaps_out = { top = 2, right = 10, bottom = 10, left = 10
 
 ### Opt-in extras
 
-The About and screensaver art are global in Omarchy, and installing a theme never runs code, so the art ships here and the `theme-set` hook that applies it lives in its own repository, [Olympus extras](https://github.com/JeanpiDev/omarchy-olympus-extras). It swaps the art in while Olympus is active and puts your previous art back when you switch to any other theme (it leaves alone anything you edited meanwhile).
+The About and screensaver art are global in Omarchy, and installing a theme never runs code, so the art ships here and the `theme-set` hook that applies it lives in its own repository, [Olympus extras](https://github.com/Jxanpi/omarchy-olympus-extras). It swaps the art in while Olympus is active and puts your previous art back when you switch to any other theme (it leaves alone anything you edited meanwhile).
 
 ```bash
-git clone https://github.com/JeanpiDev/omarchy-olympus-extras ~/.local/src/omarchy-olympus-extras
+git clone https://github.com/Jxanpi/omarchy-olympus-extras ~/.local/src/omarchy-olympus-extras
 bash ~/.local/src/omarchy-olympus-extras/install.sh     # enable
 bash ~/.local/src/omarchy-olympus-extras/uninstall.sh   # remove and restore
 ```
